@@ -1,9 +1,5 @@
 # Set up the prompt
 
-autoload -Uz promptinit
-promptinit
-prompt pure
-
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
@@ -41,7 +37,6 @@ export EDITOR='emacsclient'
 
 #aliases
 alias ec='emacsclient $*'
-#alias term='xfce4-terminal $*'
 
 # autojump
 source /usr/share/autojump/autojump.sh
@@ -52,6 +47,8 @@ source /usr/share/zplug/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
