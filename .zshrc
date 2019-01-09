@@ -49,6 +49,7 @@ zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zplug "matsub/zshtools", from:bitbucket
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
