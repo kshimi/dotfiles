@@ -33,15 +33,14 @@ done
 sudo apt update
 sudo apt upgrade
 
-# setup addtional packages
-#sh ./setup_go.sh
-
 # setup rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 (cd ~/.rbenv && src/configure && make -C src)
+mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
 git clone https://github.com/kshimi/dotfiles.git $HOME/.dotfiles
+bash $HOME/dotfiles/etc/setup_go.sh
 env RCRC=$HOME/.dotfiles/rcrc rcup
 
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
