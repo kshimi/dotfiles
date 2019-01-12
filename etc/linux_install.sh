@@ -34,3 +34,12 @@ sudo apt update
 sudo apt upgrade
 
 bash -c "$(cat ${DOTPATH}/etc/setup_go.sh)"
+
+# setup rbenv
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+(cd ~/.rbenv && src/configure && make -C src)
+
+# setup ruby-build
+mkdir -p ~/.rbenv/plugins
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
