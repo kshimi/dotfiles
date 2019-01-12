@@ -62,8 +62,10 @@ fi
 zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 [ -f ~/.fzf.zsh.local ] && source ~/.fzf.zsh.local
+
+# some addional path
+export PATH="$HOME/.go/bin:$PATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
