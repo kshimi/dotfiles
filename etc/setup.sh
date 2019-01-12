@@ -34,7 +34,7 @@ sudo apt update
 sudo apt upgrade
 
 # setup addtional packages
-sh ./setup_go.sh
+#sh ./setup_go.sh
 
 # setup rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
