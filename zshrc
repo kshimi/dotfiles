@@ -71,3 +71,5 @@ export PATH="$HOME/.go/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 typeset -U path
 eval "$(rbenv init -)"
+
+cd $HOME
