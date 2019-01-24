@@ -34,6 +34,7 @@ export EDITOR='emacsclient'
 
 #aliases
 alias ec='emacsclient $*'
+alias ls='ls --color=auto'
 
 # autojump
 source /usr/share/autojump/autojump.sh
