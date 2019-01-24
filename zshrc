@@ -50,6 +50,7 @@ zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 zplug "matsub/zshtools", from:bitbucket
+zplug "joel-porquet/zsh-dircolors-solarized", from:github, hook-load:"setupsolarized dircolors.256dark"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
