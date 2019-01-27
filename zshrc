@@ -49,7 +49,6 @@ zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 zplug "matsub/zshtools", from:bitbucket
 zplug "joel-porquet/zsh-dircolors-solarized", from:github, hook-load:"setupsolarized dircolors.256dark"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -60,6 +59,8 @@ if ! zplug check --verbose; then
 fi
 # Then, source plugins and add commands to $PATH
 zplug load
+
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.zsh.local ] && source ~/.fzf.zsh.local
