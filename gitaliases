@@ -1,0 +1,17 @@
+[alias]
+	logwords = log -p --word-diff=color --word-diff-regex=$'[^\\x80-\\xbf][\\x80-\\xbf]*'
+
+	branches = branch -a
+	tags = tag
+	staches = stash list
+
+	unstage = reset -q HEAD --
+	discard = checkout --
+	uncommit = reset --mixed HEAD~
+	amend = commit --amend
+	precommit = diff --cached --diff-algorithm=minimal -w
+
+	nevermind = !git reset --hard HEAD && git clean -d -f
+
+	graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+
