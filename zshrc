@@ -1,5 +1,4 @@
 # Set up the prompt
-
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
@@ -29,6 +28,7 @@ colors
 stty stop undef
 setopt nobgnice
 setopt extended_glob
+setopt AUTO_CD
 
 export EDITOR='emacsclient'
 
@@ -49,7 +49,7 @@ zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 zplug "matsub/zshtools", from:bitbucket
 zplug "joel-porquet/zsh-dircolors-solarized", from:github, hook-load:"setupsolarized dircolors.256dark"
-zplug agkozak/zsh-z
+zplug plugins/z, from:oh-my-zsh
 zplug andrewferrier/fzf-z
 zplug andrewferrier/fzf-z, as:command, use:fzfz
 
