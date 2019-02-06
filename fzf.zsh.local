@@ -177,3 +177,12 @@ j() {
     fi
     cd "$(autojump -s | sed '/_____/Q; s/^[0-9,.:]*\s*//' |  fzf-tmux --height 40% --reverse --inline-info)" 
 }
+
+exp() {
+    if [ $# -eq 0 ]; then
+        DIR=.
+    else
+        DIR=$*
+    fi
+    explorer.exe $DIR
+}
