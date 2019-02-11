@@ -3,3 +3,5 @@
 	email = katsuyashimizu@gmail.com
 [push]
 	default = simple
+[include]
+	path = ~/.gitaliases
