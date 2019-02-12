@@ -1,6 +1,6 @@
 [alias]
 	logwords = log -p --word-diff=color --word-diff-regex=$'[^\\x80-\\xbf][\\x80-\\xbf]*'
-
+	s = status
 	branches = branch -a
 	tags = tag
 	staches = stash list
