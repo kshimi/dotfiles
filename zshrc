@@ -51,7 +51,6 @@ zplug "matsub/zshtools", from:bitbucket
 zplug "joel-porquet/zsh-dircolors-solarized", from:github, hook-load:"setupsolarized dircolors.256dark"
 zplug plugins/z, from:oh-my-zsh
 zplug andrewferrier/fzf-z
-zplug andrewferrier/fzf-z, as:command, use:fzfz
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
