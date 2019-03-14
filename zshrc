@@ -43,6 +43,7 @@ autoload -Uz _zplugin
 ### End of Zplugin's installer chunk
 
 zplugin light zsh-users/zsh-syntax-highlighting
+zplugin ice; zplugin light junegunn/fzf
 zplugin ice from"gh-r" as"program"; zplugin light junegunn/fzf-bin
 zplugin ice; zplugin light mafredri/zsh-async
 zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
