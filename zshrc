@@ -36,31 +36,20 @@ export EDITOR='emacsclient'
 alias ec='emacsclient $*'
 alias ls='ls --color=auto'
 
-# autojump
-source /usr/share/autojump/autojump.sh
+### Added by Zplugin's installer
+source '/home/kshimi/.zplugin/bin/zplugin.zsh'
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin's installer chunk
 
-# zplug
-source /usr/share/zplug/init.zsh
-
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
-zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
-zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
-zplug "matsub/zshtools", from:bitbucket
-zplug "joel-porquet/zsh-dircolors-solarized", from:github, hook-load:"setupsolarized dircolors.256dark"
-zplug plugins/z, from:oh-my-zsh
-zplug andrewferrier/fzf-z
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-# Then, source plugins and add commands to $PATH
-zplug load
+zplugin light zsh-users/zsh-syntax-highlighting
+zplugin ice from"gh-r" as"program"; zplugin light junegunn/fzf-bin
+zplugin ice; zplugin light mafredri/zsh-async
+zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
+zplugin ice; zplugin light andrewferrier/fzf-z
+zplugin ice from"bb"; zplugin light matsub/zshtools
+zplugin ice atload'setupsolarized dircolors.ansi-light'; zplugin light joel-porquet/zsh-dircolors-solarized
+zplugin snippet OMZ::plugins/z/z.sh
 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
