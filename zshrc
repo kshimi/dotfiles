@@ -49,7 +49,7 @@ zplugin ice; zplugin light mafredri/zsh-async
 zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
 zplugin ice; zplugin light andrewferrier/fzf-z
 zplugin ice from"bb"; zplugin light matsub/zshtools
-zplugin ice atload'setupsolarized dircolors.ansi-light'; zplugin light joel-porquet/zsh-dircolors-solarized
+zplugin ice atload'setupsolarized dircolors.256dark'; zplugin light joel-porquet/zsh-dircolors-solarized
 zplugin snippet OMZ::plugins/z/z.sh
 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
