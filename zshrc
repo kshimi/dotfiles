@@ -9,6 +9,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+[ `uname` = "Darwin" ] && export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -37,7 +39,7 @@ alias ec='emacsclient $*'
 alias ls='ls --color=auto'
 
 ### Added by Zplugin's installer
-source '/home/kshimi/.zplugin/bin/zplugin.zsh'
+source "$HOME/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin's installer chunk
@@ -57,12 +59,6 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.zsh.local ] && source ~/.fzf.zsh.local
 
-# some addional path
-export PATH="$HOME/.go/bin:$PATH"
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
 typeset -U path
-eval "$(rbenv init -)"
 
 cd $HOME
