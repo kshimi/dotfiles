@@ -59,6 +59,8 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.zsh.local ] && source ~/.fzf.zsh.local
 
+export FZFZ_EXCLUDE_PATTERN="\/.(bundle|cache|config|dbus|git)"
+
 typeset -U path
 
 cd $HOME
