@@ -61,6 +61,6 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 export FZFZ_EXCLUDE_PATTERN="\/.(bundle|cache|config|dbus|git)"
 
-typeset -U path
+typeset -U path PATH
 
 cd $HOME
