@@ -38,21 +38,21 @@ export EDITOR='emacsclient'
 alias ec='emacsclient $*'
 alias ls='ls --color=auto'
 
-### Added by Zplugin's installer
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin's installer chunk
+### Added by Zinit's installer
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit's installer chunk
 
-zplugin light zsh-users/zsh-syntax-highlighting
-zplugin ice; zplugin light junegunn/fzf
-zplugin ice from"gh-r" as"program"; zplugin light junegunn/fzf-bin
-zplugin ice; zplugin light mafredri/zsh-async
-zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
-zplugin ice; zplugin light andrewferrier/fzf-z
-zplugin ice from"bb"; zplugin light matsub/zshtools
-zplugin ice atload'setupsolarized dircolors.256dark'; zplugin light joel-porquet/zsh-dircolors-solarized
-zplugin snippet OMZ::plugins/z/z.sh
+zinit light zsh-users/zsh-syntax-highlighting
+zinit ice; zinit light junegunn/fzf
+zinit ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
+zinit ice; zinit light mafredri/zsh-async
+zinit ice pick"async.zsh" src"pure.zsh"; zinit light sindresorhus/pure
+zinit ice; zinit light andrewferrier/fzf-z
+zinit ice from"bb"; zinit light matsub/zshtools
+zinit ice atload'setupsolarized dircolors.256dark'; zinit light joel-porquet/zsh-dircolors-solarized
+zinit snippet OMZ::plugins/z/z.sh
 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
