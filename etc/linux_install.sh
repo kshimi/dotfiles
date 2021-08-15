@@ -23,6 +23,8 @@ packagelist=(
 
 #    "tree"
 #    "fontforge"
+    "fd-find"
+    "ripgrep"
 )
 
 echo "start apt install apps..."

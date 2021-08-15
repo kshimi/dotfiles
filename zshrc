@@ -52,7 +52,7 @@ zinit ice pick"async.zsh" src"pure.zsh"; zinit light sindresorhus/pure
 zinit ice; zinit light andrewferrier/fzf-z
 zinit ice from"bb"; zinit light matsub/zshtools
 zinit ice atload'setupsolarized dircolors.256dark'; zinit light joel-porquet/zsh-dircolors-solarized
-zinit snippet OMZ::plugins/z/z.sh
+#zinit snippet OMZ::plugins/z/z.sh
 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
